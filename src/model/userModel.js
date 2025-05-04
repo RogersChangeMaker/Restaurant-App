@@ -3,6 +3,11 @@
 export const signUpUser = function (email, password, reTypedPassword) {
   if (!email || !password || !reTypedPassword)
     return alert("Fill all the fields");
+
+  //6) as explained in controller.js, the function will now
+  //  create a new user with the data you provided and
+  //  now will return it
+
   const user = {
     email,
     password,
@@ -12,5 +17,5 @@ export const signUpUser = function (email, password, reTypedPassword) {
 
 export const signIn = function(){
   console.log("signIn Model");
-}
+};
 
