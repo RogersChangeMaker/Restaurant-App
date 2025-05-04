@@ -1,0 +1,17 @@
+@use "./../base/colors" as color;
+
+@mixin buttonStyle{
+     padding: 1rem 0;
+    
+    cursor: pointer;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+
+    background-color: color.$color-primary;
+
+&:hover{
+        background-color: color.$color-primary-dark;
+    }
+
+}

@@ -1,0 +1,18 @@
+
+@use '../base/colors' as color;
+
+.container{
+    min-width: 80%;
+    height: 85vh;
+    min-height: 85vh;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 20px 11px color.$color-primary-dark;
+
+    position: absolute;
+    top: 6.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: color.$color-white;
+
+}

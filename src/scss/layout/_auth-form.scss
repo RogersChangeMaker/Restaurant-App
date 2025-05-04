@@ -1,0 +1,84 @@
+@use "./../base/colors" as color;
+
+.section-auth {
+  font-size: 1.4rem;
+  display: flex;
+  height: 100%;
+
+  & > * {
+    width: 50%;
+  }
+  img {
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  &-content {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    & > p {
+      font-size: 2.4rem;
+      margin-top: 0.8rem;
+      text-align: center;
+    }
+  }
+  &-controls-buttons {
+    display: flex;
+    margin-top: 3rem;
+    gap: 2rem;
+
+    button {
+      font-size: 2rem;
+      font-weight: 700;
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: color.$text-body;
+      padding: 0.5rem;
+      transition: all 0.1sec;
+    }
+
+    button:hover {
+      border-bottom: 0.2rem solid color.$color-primary;
+    }
+    .active-auth {
+      font-weight: bold;
+      color: color.$text-heading;
+      border-bottom: 0.2rem solid color.$color-primary;
+    }
+  }
+  &-form {
+    margin-top: 2rem;
+
+    .group-input {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+
+      label {
+        color: color.$text-heading;
+        font-weight: 500;
+      }
+      input {
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-family: "poppins", sans-serif;
+        border-radius: 0.1rem solid color.$text-body;
+        outline: none;
+        border-radius: 1.5rem;
+      }
+    }
+
+    &-captcha {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+  }
+}

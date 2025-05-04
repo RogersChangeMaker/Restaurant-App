@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #E65C2B, #FF4B4B);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  position: relative;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+#auth-button {
+  padding: 1rem 0;
+  cursor: pointer;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  background-color: #FF4B4B;
+  width: 100%;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+#auth-button:hover {
+  background-color: #c20e0e;
+}
+
+.container {
+  min-width: 80%;
+  height: 85vh;
+  min-height: 85vh;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 20px 11px #c20e0e;
+  position: absolute;
+  top: 6.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFF;
+}
+
+.section-auth {
+  font-size: 1.4rem;
+  display: flex;
+  height: 100%;
+}
+.section-auth > * {
+  width: 50%;
+}
+.section-auth img {
+  object-fit: cover;
+  object-position: bottom;
+}
+.section-auth-content {
+  padding: 1.5rem;
+}
+.section-auth-content h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.section-auth-content > p {
+  font-size: 2.4rem;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.section-auth-controls-buttons {
+  display: flex;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.section-auth-controls-buttons button {
+  font-size: 2rem;
+  font-weight: 700;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 0.5rem;
+  transition: all 0.1sec;
+}
+.section-auth-controls-buttons button:hover {
+  border-bottom: 0.2rem solid #FF4B4B;
+}
+.section-auth-controls-buttons .active-auth {
+  font-weight: bold;
+  color: #1A1A1A;
+  border-bottom: 0.2rem solid #FF4B4B;
+}
+.section-auth-form {
+  margin-top: 2rem;
+}
+.section-auth-form .group-input {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.section-auth-form .group-input label {
+  color: #1A1A1A;
+  font-weight: 500;
+}
+.section-auth-form .group-input input {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "poppins", sans-serif;
+  border-radius: 0.1rem solid #666;
+  outline: none;
+  border-radius: 1.5rem;
+}
+.section-auth-form-captcha {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

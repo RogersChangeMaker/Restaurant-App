@@ -1,0 +1,14 @@
+@use "./../base/colors" as color;
+@use "./../utils/mixin" as mixin;
+
+#auth-button{
+    @include mixin.buttonStyle;
+    width: 100%;
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    
+   
+
+    
+}
