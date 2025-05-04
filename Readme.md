@@ -1,0 +1,1 @@
+This repository contains the codes and styling of a simple restaurant app
