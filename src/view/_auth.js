@@ -33,7 +33,7 @@ const displayLogin = function (userSignIn) {
                 <label for="password">Password</label>
                 <input
                   type="password"
-                  placeholder="Enter Your Passwrd"
+                  placeholder="Enter Your Password"
                   id="password"
                 />
               </div>
@@ -41,7 +41,7 @@ const displayLogin = function (userSignIn) {
                 <label for="confirm_password">Confirm Password</label>
                 <input
                   type="password"
-                  placeholder="Confirm Your Passwrd"
+                  placeholder="Confirm Your Password"
                   id="confirm_password"
                 />
               </div>
