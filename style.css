@@ -47,6 +47,7 @@ body {
   min-height: 85vh;
   border-radius: 1.5rem;
   box-shadow: 0 12px 20px 11px #c20e0e;
+  overflow: hidden;
   position: absolute;
   top: 6.6rem;
   left: 50%;
@@ -127,6 +128,25 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.landing-container {
+  border: 2px solid teal;
+  height: 100vh;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+}
+.landing-container .nav-land {
+  background-color: red;
+  grid-column: 1/-1;
+}
+.landing-container .aside-land {
+  background-color: blue;
+}
+.landing-container .main-land {
+  background-color: greenyellow;
 }
 
 /*# sourceMappingURL=style.css.map */

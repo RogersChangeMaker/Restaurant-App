@@ -17,7 +17,5 @@ export const signUpUser = function (email, password, reTypedPassword) {
   return user;
 };
 
-export const signIn = function(){
-  console.log("signIn Model");
-};
+
 
