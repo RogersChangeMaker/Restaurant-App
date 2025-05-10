@@ -92,12 +92,27 @@ document.addEventListener("click", function (e) {
 });
 
 // we shall crete a 2nd document eventListener for the landing page
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("search-list")) {
-    console.log("search-button clicked");
+document.addEventListener("click", async function (e) {
+  // this if is to check if you are clicking on search button
+  if (e.target.classList.contains("search-button")) {
+    const searchItem = e.target.previousElementSibling.value;
+    // THE e IS THE SEARCH IMPUT WHILE THE PREVIOUS ELEMENT IS
+    // THE SEARCH INPUT
+
+    if (!searchItem) return alert("Enter Item to Search");
+
+    try {
+      const res = await fetch(
+        `https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchItem}&key=3d99a6ae-b1e4-4b0a-9732-7d8807904cc1`
+      );
+
+      const data = await res.json();
+
+      console.log(data);
+
+    } catch (error) {
+
+    }
+
   }
 });
-
-// 3d99a6ae-b1e4-4b0a-9732-7d8807904cc1
-
-// https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza&key=<insert your key>

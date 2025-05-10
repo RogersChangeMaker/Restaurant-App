@@ -4,7 +4,7 @@ export const landingView = function () {
     <nav class="nav-land">
       <div>🥭 Wase Recipes</div>
       <form class="search-form">
-        <input type="text" placeholder="Search Recipe..."/>
+        <input type="text" class="search-input" placeholder="Search Recipe..."/>
         <button type="button" class="search-button">Search</button>
       </form>
       <div>BookMarks</div>
