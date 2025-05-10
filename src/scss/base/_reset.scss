@@ -1,5 +1,7 @@
 
-@use './colors' as color;
+@use './colors' as *;
+
+@use './../utils/mixin' as *;
 
 html{
     font-size: 62.5%;
@@ -11,11 +13,7 @@ html{
 }
 
 body{
-    background-image: linear-gradient(
-        to right bottom,
-        color.$color-buttons,
-        color.$color-primary
-    );
+    @include linearGradient;
 
     font-family: 'Poppins', sans-serif;
     font-weight: 400;

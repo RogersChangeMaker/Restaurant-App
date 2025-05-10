@@ -19,42 +19,44 @@ const handleAuthButton = () => {
   displayScreen(displayLogin(isSignIn));
 };
 
-const handleSignIn = (email,password) =>{
-  console.log
-  (users.find(user => user.email === email && user.password === password));
+const handleSignIn = (email, password) => {
+  // console.log
+  // (users.find(user => user.email === email && user.password === password));
 
   // this function displays the landing view (second page)
   displayScreen(landingView());
-}
-
-
+};
 
 //5) The handleSignUp will now call the signUser in the userModel.js file
 const handleSignup = function (email, password, confirm_password) {
   //7) the returned value will be pushed
   const data = signUpUser(email, password, confirm_password);
   if (!data) return console.log("Invalid Data");
-  
+
   users.push(data);
-  localStorage.setItem("userdata", JSON.stringify([...users ]));
+  localStorage.setItem("userdata", JSON.stringify([...users]));
 };
 
 // this function will help us retrive data from local storage
-const getInitialData = ()=>{
+const getInitialUsers = () => {
   // to format this data to an object, we add the JSON.parse
   // putting the data into an array
-  users.push(...JSON.parse(localStorage.getItem("userdata")));
+  const data = JSON.parse(localStorage.getItem("userdata"));
+  // Guard condition
+  if (!data) return;
+  users.push(...data);
   console.log(users);
-}
+};
 
 // this function will run at the start of our array
 const init = function () {
-  displayScreen(displayLogin(isSignIn));
-  getInitialData();
+  displayScreen(landingView());
+  getInitialUsers();
 };
 
 init();
 
+// this entire block of document listener is to handle signin and signup
 document.addEventListener("click", function (e) {
   //1) this first button represents the signin and signup buttons that will display the view you want
   if (
@@ -74,7 +76,6 @@ document.addEventListener("click", function (e) {
 
     //3) if user is on signin view the button will attempt to sign in
     if (isSignIn) {
-      e.preventDefault();
       handleSignIn(inputEmail.value, inputPassword.value);
       return;
     }
@@ -89,3 +90,14 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// we shall crete a 2nd document eventListener for the landing page
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("search-list")) {
+    console.log("search-button clicked");
+  }
+});
+
+// 3d99a6ae-b1e4-4b0a-9732-7d8807904cc1
+
+// https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza&key=<insert your key>

@@ -131,16 +131,41 @@ body {
 }
 
 .landing-container {
-  border: 2px solid teal;
-  height: 100vh;
+  height: 100%;
   max-height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 4fr;
 }
 .landing-container .nav-land {
-  background-color: red;
+  background-color: rgb(235, 230, 230);
   grid-column: 1/-1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 4rem;
+}
+.landing-container .nav-land .search-form {
+  display: flex;
+}
+.landing-container .nav-land .search-form .search-button {
+  border: none;
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-left: -1rem;
+  font-size: 2rem;
+  background-image: linear-gradient(to right bottom, #E65C2B, #FF4B4B);
+}
+.landing-container .nav-land .search-form input {
+  height: 4rem;
+  border: 0.1rem solid #ddd;
+  border-right: none;
+  outline: none;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  padding-left: 1rem;
+  font-size: 2rem;
 }
 .landing-container .aside-land {
   background-color: blue;
