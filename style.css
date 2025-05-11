@@ -49,7 +49,7 @@ body {
   box-shadow: 0 12px 20px 11px #c20e0e;
   overflow: hidden;
   position: absolute;
-  top: 6.6rem;
+  top: 6.5rem;
   left: 50%;
   transform: translateX(-50%);
   background-color: #FFF;
@@ -143,7 +143,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 4rem;
+  font-size: 3.8rem;
 }
 .landing-container .nav-land .search-form {
   display: flex;

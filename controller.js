@@ -101,7 +101,7 @@ document.addEventListener("click", async function (e) {
 
     if (!searchItem) return alert("Enter Item to Search");
 
-    try {
+    try{
       const res = await fetch(
         `https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchItem}&key=3d99a6ae-b1e4-4b0a-9732-7d8807904cc1`
       );
