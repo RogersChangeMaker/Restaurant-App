@@ -155,6 +155,7 @@ body {
   border-radius: 1rem;
   margin-left: -1rem;
   font-size: 2rem;
+  cursor: pointer;
   background-image: linear-gradient(to right bottom, #E65C2B, #FF4B4B);
 }
 .landing-container .nav-land .search-form input {
@@ -175,7 +176,7 @@ body {
 }
 .landing-container .main-land .img {
   width: 100%;
-  height: 12rem;
+  height: 8rem;
   object-fit: cover;
 }
 .landing-container .main-land .description {

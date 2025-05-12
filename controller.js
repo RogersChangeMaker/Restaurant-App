@@ -58,6 +58,21 @@ const renderLoading = function(element){
   element.innerHTML = 'Loading ...'
 }
 
+const renderRecipe = function(element, img, description){
+  
+  // WE NEED TO DESTRUCTURE THE INGREDIENT
+  const ingredients = description.map(des => Object.values(des)).map(des => des.join(' '))
+
+   element.innerHTML = `<img src=${img} class="main-image">
+
+    <div class="description">
+    <h1>Recipe</h1>
+    <pre>${ingredients.join('\n')}</pre>
+    </div>`;
+    // THE \n MEANS THAT AFTER PRINTING ONE LINE IT GOES TO THE NEXT LINE
+}
+ 
+
 init();
 
 // this entire block of document listener is to handle signin and signup
@@ -98,6 +113,10 @@ document.addEventListener("click", function (e) {
 
 // we shall crete a 2nd document eventListener for the landing page
 document.addEventListener("click", async function (e) {
+
+  const main = document.querySelector('.main-land')
+
+
   // this if is to check if you are clicking on search button
   if (e.target.classList.contains("search-button")) {
     const searchItem = e.target.previousElementSibling.value;
@@ -108,17 +127,27 @@ document.addEventListener("click", async function (e) {
 
     try{
       renderLoading(main)
+      // const res = await fetch(
+      //   `https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchItem}&key=3d99a6ae-b1e4-4b0a-9732-7d8807904cc1`
+      // );
+
+      renderLoading(main);
       const res = await fetch(
-        `https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchItem}&key=3d99a6ae-b1e4-4b0a-9732-7d8807904cc1`
+        `https://forkify-api.herokuapp.com/api/v2/recipes/664c8f193e7aa067e94e868f`
       );
 
-      MediaDeviceInfo.innerHTML = 'Done'
+      
 
-      const data = await res.json();
+      const dataRes = await res.json();
+      const recipeData = dataRes.data.recipe;
 
-      console.log(data);
+      console.log(recipeData);
+// THIS IMAGE_URL AND INGREDIENTS ARE THE WAY THEY APPEAR IN THE CONSILE OF THE WEBPAGE FOR THAT PARTICULAR RECIPE
+      renderRecipe(main,recipeData.image_url,recipeData.ingredients)
 
-    } catch (error) {
+    } 
+    catch (error) {
+      alert(error)
 
     }
 

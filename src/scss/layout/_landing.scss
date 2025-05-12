@@ -26,6 +26,7 @@
         border-radius: 1rem;
         margin-left: -1rem;
         font-size: 2rem;
+        cursor: pointer;
         @include mixin.linearGradient;
     
 
@@ -55,16 +56,15 @@
 
     .img{
       width: 100%;
-      height: 12rem;
+      height: 8rem;
       object-fit: cover;
     }
 
     .description{
       background-color: #eee;
       padding:2rem;
-      
-    }
 
+    }
 
     background-color: greenyellow;
   }
