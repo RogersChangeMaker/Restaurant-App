@@ -10,7 +10,15 @@ export const landingView = function () {
       <div>BookMarks</div>
     </nav>
     <aside class="aside-land"></aside>
-    <main class="main-land"></main>
+    <main class="main-land">
+    <img class="main-image">
+
+    <div class="description">
+    <h1>Recipe</h1>
+    <p>Recipe Description</p>
+    </div>
+    
+    </main>
     </div>
     `;
 };

@@ -54,6 +54,10 @@ const init = function () {
   getInitialUsers();
 };
 
+const renderLoading = function(element){
+  element.innerHTML = 'Loading ...'
+}
+
 init();
 
 // this entire block of document listener is to handle signin and signup
@@ -91,6 +95,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
 // we shall crete a 2nd document eventListener for the landing page
 document.addEventListener("click", async function (e) {
   // this if is to check if you are clicking on search button
@@ -102,9 +107,12 @@ document.addEventListener("click", async function (e) {
     if (!searchItem) return alert("Enter Item to Search");
 
     try{
+      renderLoading(main)
       const res = await fetch(
         `https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchItem}&key=3d99a6ae-b1e4-4b0a-9732-7d8807904cc1`
       );
+
+      MediaDeviceInfo.innerHTML = 'Done'
 
       const data = await res.json();
 
