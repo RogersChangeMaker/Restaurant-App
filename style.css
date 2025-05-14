@@ -174,9 +174,9 @@ body {
 .landing-container .main-land {
   background-color: greenyellow;
 }
-.landing-container .main-land .img {
+.landing-container .main-land img {
   width: 100%;
-  height: 8rem;
+  height: 20rem;
   object-fit: cover;
 }
 .landing-container .main-land .description {
