@@ -50,7 +50,7 @@ const getInitialUsers = () => {
 
 // this function will run at the start of our array
 const init = function () {
-  displayScreen(landingView());
+  displayScreen(displayLogin(isSignIn));
   getInitialUsers();
 };
 
